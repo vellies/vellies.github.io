@@ -21,7 +21,19 @@
 */
 
 import React from 'react';
-import { FiMail, FiPhone, FiDownload, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiMail, FiDownload, FiLinkedin, FiGithub } from 'react-icons/fi';
+
+interface ExperienceProps {
+  company: string;
+  role: string;
+  duration: string;
+}
+
+interface ProjectProps {
+  title: string;
+  desc: string;
+  tech: string;
+}
 
 export default function App() {
   const SOCIALS = {
@@ -57,7 +69,7 @@ export default function App() {
         <section className="bg-gradient-to-r from-white via-indigo-50 to-white rounded-2xl p-8 shadow-sm">
           <div className="md:flex md:items-center md:justify-between">
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Hi — I'm Vellieswaran.</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Hi — I&apos;m Vellieswaran.</h2>
               <p className="mt-3 text-gray-700 max-w-xl">A pragmatic Full Stack JavaScript Developer with 6+ years building robust web applications using React, Next.js, Node.js and modern cloud platforms. I build scalable, maintainable products with a focus on developer experience and clean code.</p>
 
               <div className="mt-6 flex gap-3">
@@ -155,7 +167,7 @@ export default function App() {
   );
 }
 
-function ExperienceCard({ company, role, duration }: any) {
+function ExperienceCard({ company, role, duration }: ExperienceProps) {
   return (
     <div className="p-4 border border-gray-100 rounded-md">
       <div className="flex items-center justify-between">
@@ -169,7 +181,7 @@ function ExperienceCard({ company, role, duration }: any) {
   );
 }
 
-function ProjectCard({ title, desc, tech }: any) {
+function ProjectCard({ title, desc, tech }:ProjectProps) {
   return (
     <article className="bg-white rounded-lg p-5 shadow-sm border border-gray-50">
       <h4 className="font-semibold">{title}</h4>
