@@ -70,7 +70,7 @@ export default function App() {
           <div className="md:flex md:items-center md:justify-between">
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Hi — I&apos;m Vellieswaran.</h2>
-              <p className="mt-3 text-gray-700 max-w-xl">A pragmatic Full Stack JavaScript Developer with 6+ years building robust web applications using React, Next.js, Node.js and modern cloud platforms. I build scalable, maintainable products with a focus on developer experience and clean code.</p>
+              <p className="mt-3 text-gray-700 max-w-xl">A pragmatic Full Stack JavaScript Developer with 7+ years building robust web applications using React, Next.js, Node.js and modern cloud platforms. I build scalable, maintainable products with a focus on developer experience and clean code.</p>
 
               <div className="mt-6 flex gap-3">
                 <a href="#projects" className="px-4 py-2 rounded-md bg-indigo-600 text-white text-sm shadow hover:bg-indigo-700">View Projects</a>
