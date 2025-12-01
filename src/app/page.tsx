@@ -189,8 +189,12 @@ export default function Home() {
   );
 }
 
-/* Reusable components */
-function Project({ title, description }:any) {
+interface ProjectProps {
+  title: string;
+  description: string;
+}
+
+function Project({ title, description }: ProjectProps) {
   return (
     <div>
       <h4 className="font-bold text-lg">{title}</h4>
@@ -199,10 +203,15 @@ function Project({ title, description }:any) {
   );
 }
 
-function Skill({ title }:any) {
+interface SkillProps {
+  title: string;
+}
+
+function Skill({ title }: SkillProps) {
   return (
     <span className="px-3 py-2 bg-gray-100 rounded-md text-sm font-medium">
       {title}
     </span>
   );
 }
+
