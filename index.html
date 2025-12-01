@@ -1,103 +1,228 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Vellieswaran R – Full Stack Developer Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vellieswaran R — Resume</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#0B5394;
+      --accent-2:#1A73E8;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --paper:#f7f9fc;
+      --max-width:900px;
+      --radius:10px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--paper);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#111}
+    a{color:var(--accent-2);text-decoration:none}
+    .container{max-width:var(--max-width);margin:28px auto;padding:22px;background:var(--bg);border-radius:var(--radius);box-shadow:0 6px 30px rgba(16,24,40,0.08)}
+    header{display:flex;gap:18px;align-items:center}
+    .photo{
+      width:104px;height:104px;border-radius:50%;overflow:hidden;border:3px solid #eef4ff;flex:0 0 104px;background:#e6eefc;display:flex;align-items:center;justify-content:center
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .title{
+      flex:1;min-width:0;
+    }
+    .name{font-size:20px;font-weight:700;margin:0;color:#0f172a}
+    .role{margin:4px 0 10px;color:var(--muted);font-weight:600}
+    .contacts{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:14px}
+    .contacts div{display:flex;gap:8px;align-items:center}
+
+    .layout{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:20px}
+    main{min-width:0}
+    aside{background:#fbfdff;padding:16px;border-radius:8px;border:1px solid #f0f6ff}
+
+    h2.section-title{font-size:14px;color:var(--accent);margin:0 0 10px;font-weight:700;letter-spacing:0.6px}
+    p.lead{margin:0;color:#111;line-height:1.5}
+    ul{margin:8px 0 16px;padding-left:18px}
+    li{margin-bottom:8px;line-height:1.45;color:#111}
+    .job{margin-bottom:14px}
+    .job .job-title{font-weight:600;color:#0f172a}
+    .job .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#eef6ff;color:var(--accent-2);font-weight:600;font-size:12px}
+
+    .projects .project{margin-bottom:12px}
+    .skills-grid{display:grid;grid-template-columns:repeat(1, minmax(0,1fr));gap:10px}
+    .skill-line{font-size:14px;color:#111}
+    .footer-note{font-size:13px;color:var(--muted);margin-top:12px}
+
+    /* Responsive */
+    @media(min-width:880px){
+      .skills-grid{grid-template-columns:repeat(1, minmax(0,1fr))}
+    }
+    @media(max-width:760px){
+      .layout{grid-template-columns:1fr;gap:18px}
+      header{flex-direction:row}
+      .photo{width:86px;height:86px}
+    }
+
+    /* Print friendly */
+    @media print{
+      body{background:white}
+      .container{box-shadow:none;border-radius:0;margin:0;padding:10px;max-width:100%}
+      a::after{content:" (" attr(href) ")";font-size:11px}
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 shadow-lg">
-    <div class="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center">
-      <div>
-        <h1 class="text-3xl font-bold mb-1">Vellieswaran R</h1>
-        <p class="text-lg italic">Full Stack JavaScript Developer (MERN)</p>
-        <p class="text-sm mt-2">📍 Salem, Tamil Nadu &bull; Fluent in English & Tamil</p>
+<body>
+  <div class="container" role="document" aria-label="Resume — Vellieswaran R">
+    <header>
+      <div class="photo" aria-hidden="true">
+        <!-- Replace src with your photo file name, or remove <img> if no photo -->
+        <img src="profile.jpg" alt="Vellieswaran R" onerror="this.style.display='none'">
       </div>
-      <div class="mt-4 md:mt-0 flex space-x-4 items-center">
-        <a href="mailto:vellies6113@gmail.com" class="hover:text-yellow-300"><span>📧</span></a>
-        <a href="tel:+919751847178" class="hover:text-yellow-300"><span>📞</span></a>
-        <a href="https://www.linkedin.com/in/vellieswaran-r-81b206103" target="_blank" class="hover:text-yellow-300"><span>🔗</span></a>
-      </div>
-    </div>
-  </header>
 
-  <!-- About & Objective -->
-  <section class="max-w-3xl mx-auto mt-10 bg-white rounded-xl shadow p-6">
-    <h2 class="text-xl font-bold text-blue-700 mb-2">Professional Objective</h2>
-    <p>
-      To secure a position as a Full Stack JavaScript Developer where I can utilize my skills in Front-end, Back-end, SQL & NoSQL Database to build and maintain high-quality web applications, while learning the latest technologies like NFTs, Web3, Blockchain.
-    </p>
-  </section>
+      <div class="title">
+        <h1 class="name">VELLIESWARAN R</h1>
+        <div class="role">Full Stack JavaScript Developer (MERN)</div>
 
-  <!-- Skills -->
-  <section class="max-w-3xl mx-auto mt-8 bg-white rounded-xl shadow p-6">
-    <h2 class="text-xl font-bold text-blue-700 mb-2">Technical Skills</h2>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">ReactJS</span>
-      <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">Node.js</span>
-      <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full">MongoDB</span>
-      <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">Next.js</span>
-      <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full">Tailwind CSS</span>
-      <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full">JavaScript</span>
-      <span class="bg-blue-50 text-blue-800 px-3 py-1 rounded-full">Nginx/DNS/Cloud</span>
-      <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">Solidity</span>
-      <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full">REST API</span>
-    </div>
-  </section>
-
-  <!-- Work Experience -->
-  <section class="max-w-3xl mx-auto mt-8 bg-white rounded-xl shadow p-6">
-    <h2 class="text-xl font-bold text-blue-700 mb-2">Work Experience</h2>
-    <div>
-      <h3 class="text-lg font-semibold">Full Stack JavaScript Developer — CRYPKEN IND (June 2022 – Present)</h3>
-      <ul class="list-disc list-inside ml-4 text-sm mb-4">
-        <li>Designed & maintained scalable MERN stack solutions on cloud platforms</li>
-        <li>Integration of DNS, Nginx and system-level operations</li>
-        <li>Optimized application security and performance</li>
-      </ul>
-      <h3 class="text-lg font-semibold">Software Engineer — Zyena Technologies SDN (June 2020 – May 2022)</h3>
-      <ul class="list-disc list-inside ml-4 text-sm mb-4">
-        <li>Developed full stack applications using React and Node</li>
-        <li>Led API & database integrations for client projects</li>
-        <li>Provided technical training to junior developers</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="max-w-3xl mx-auto mt-8 bg-white rounded-xl shadow p-6">
-    <h2 class="text-xl font-bold text-blue-700 mb-2">Key Projects</h2>
-    <div class="grid md:grid-cols-2 gap-4">
-      <div class="bg-blue-50 p-4 rounded">
-        <h4 class="font-bold text-blue-600 mb-1">Signature (Blockchain Certificate)</h4>
-        <p class="text-sm">Digital certificates and badges using Web3.0 & Blockchain, tamper-proof verification.</p>
-        <div class="mt-2 flex flex-wrap gap-1">
-          <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded">React</span>
-          <span class="bg-green-100 text-green-700 px-2 py-1 rounded">Node.js</span>
+        <div class="contacts" aria-hidden="false">
+          <div><strong>📧</strong> vellies6113@gmail.com</div>
+          <div><strong>📱</strong> +91 97518 47178</div>
+          <div><strong>🔗</strong> <a href="https://www.linkedin.com/in/vellieswaran-r-81b206103" target="_blank" rel="noopener">linkedin.com/in/vellieswaran-r-81b206103</a></div>
         </div>
       </div>
-      <div class="bg-blue-50 p-4 rounded">
-        <h4 class="font-bold text-blue-600 mb-1">CloudDrive</h4>
-        <p class="text-sm">Real-time cloud storage integration for large MERN applications.</p>
-        <div class="mt-2 flex flex-wrap gap-1">
-          <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded">MongoDB</span>
-          <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded">Nginx</span>
-        </div>
-      </div>
+    </header>
+
+    <div class="layout">
+      <main>
+        <section aria-labelledby="objective">
+          <h2 id="objective" class="section-title">Professional Objective</h2>
+          <p class="lead">Full Stack JavaScript Developer with 8+ years of experience building scalable, high-performance web applications using React, Next.js, Node.js, Express, MongoDB, and PostgreSQL. Strong expertise in REST API development, cloud deployment (DigitalOcean, Alibaba Cloud, AWS S3), CI/CD automation, and performance optimization. Seeking a challenging role to contribute to end-to-end product development in a fast-growing organization.</p>
+        </section>
+
+        <section aria-labelledby="experience" style="margin-top:18px;">
+          <h2 id="experience" class="section-title">Work Experience</h2>
+
+          <article class="job" aria-labelledby="job1">
+            <div id="job1" class="job-title">Senior Full Stack JavaScript Developer</div>
+            <div class="meta">GETO, Coimbatore | Oct 2024 – Present</div>
+            <ul>
+              <li>Architected and delivered full-stack features using React.js, Next.js and Node.js, improving user experience and platform stability.</li>
+              <li>Boosted API performance by <strong>35%</strong> through database query optimization and payload restructuring.</li>
+              <li>Migrated file processing workflows to <strong>AWS S3</strong>, increasing reliability and reducing storage costs by <strong>28%</strong>.</li>
+              <li>Managed deployments on <strong>DigitalOcean</strong> &amp; <strong>Alibaba Cloud</strong>, reducing deployment failures by <strong>90%</strong>.</li>
+              <li>Configured Nginx for reverse proxying, caching, SSL and multi-domain routing.</li>
+              <li>Implemented CI/CD pipelines using GitHub Actions, reducing release time from hours to minutes.</li>
+              <li>Led debugging and production issue resolution, reducing recurring issues by <strong>40%</strong>.</li>
+            </ul>
+          </article>
+
+          <article class="job" aria-labelledby="job2">
+            <div id="job2" class="job-title">Full Stack JavaScript Developer</div>
+            <div class="meta">Crypken IND, Malaysia | June 2022 – Sep 2024</div>
+            <ul>
+              <li>Delivered 15+ production-ready MERN/Next.js features.</li>
+              <li>Designed secure REST APIs with JWT authentication, reducing auth issues by <strong>50%</strong>.</li>
+              <li>Improved UI rendering performance by <strong>30%</strong> via code-splitting and component optimization.</li>
+              <li>Reduced critical server response times by <strong>45%</strong> through API tuning.</li>
+              <li>Integrated third-party APIs and automated workflows, cutting manual tasks by <strong>60%</strong>.</li>
+              <li>Collaborated in cross-functional sprints, improving delivery accuracy to <strong>95%</strong>.</li>
+            </ul>
+          </article>
+
+          <article class="job" aria-labelledby="job3">
+            <div id="job3" class="job-title">Full Stack JavaScript Developer</div>
+            <div class="meta">Zyena Technologies SDN. BHD | June 2020 – May 2022</div>
+            <ul>
+              <li>Built scalable React/Node applications serving 10,000+ monthly users.</li>
+              <li>Implemented SSR in Next.js, improving SEO and initial page load speed by <strong>55%</strong>.</li>
+              <li>Refactored legacy UI into reusable components, reducing dev time by <strong>20%</strong>.</li>
+              <li>Maintained cloud environments and automated deployment scripts.</li>
+            </ul>
+          </article>
+
+          <article class="job" aria-labelledby="job4">
+            <div id="job4" class="job-title">Full Stack Developer</div>
+            <div class="meta">Rayi Software, Chennai | Oct 2016 – May 2020</div>
+            <ul>
+              <li>Developed UI screens, backend modules, and REST APIs using React &amp; Node.js.</li>
+              <li>Designed SQL/NoSQL schemas, improving query performance by <strong>25%</strong>.</li>
+              <li>Collaborated with QA to reduce bug turnaround time by <strong>40%</strong>.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section aria-labelledby="projects" style="margin-top:18px;">
+          <h2 id="projects" class="section-title">Key Projects</h2>
+          <div class="projects">
+            <div class="project">
+              <strong>Captivo – Farm Data Collection Tool</strong><br>
+              A dynamic farm data collection and analytics platform supporting multi-country templates, automated workflows, and cycle/house/farm-level tracking.
+            </div>
+
+            <div class="project" style="margin-top:10px">
+              <strong>IHIS – Healthcare Management System</strong><br>
+              End-to-end hospital management suite with RBAC dashboards, EMR, lab &amp; pharmacy modules, appointment &amp; queue automation.
+            </div>
+
+            <div class="project" style="margin-top:10px">
+              <strong>Signature – Digital Certificates Platform</strong><br>
+              Secure certificate and badge issuance platform with verification workflows.
+            </div>
+
+            <div class="project" style="margin-top:10px">
+              <strong>Chatbot + CloudFront Integration</strong><br>
+              AI chatbot for document-based Q&amp;A, delivered via a global CDN integration.
+            </div>
+
+            <div class="project" style="margin-top:10px">
+              <strong>Employee Timesheet System</strong><br>
+              Slack-integrated attendance, task reminders, leave management and reporting dashboards.
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside aria-labelledby="side">
+        <section id="side">
+          <h2 class="section-title">Skills</h2>
+
+          <div class="skills-grid">
+            <div class="skill-line"><strong>Frontend:</strong> React.js, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, shadcn UI</div>
+            <div class="skill-line"><strong>Backend:</strong> Node.js, Express.js, REST APIs, GraphQL</div>
+            <div class="skill-line"><strong>Database:</strong> MongoDB, MySQL, PostgreSQL</div>
+            <div class="skill-line"><strong>Cloud & Deployment:</strong> DigitalOcean, Alibaba Cloud, AWS S3, Nginx</div>
+            <div class="skill-line"><strong>Tools:</strong> Git, GitHub, GitLab, Bitbucket, GitHub Actions</div>
+            <div class="skill-line"><strong>Other:</strong> CI/CD, System Design Basics, Performance Optimization, API Integration</div>
+          </div>
+
+          <div style="margin-top:14px">
+            <h2 class="section-title">Education</h2>
+            <div><strong>B.E. Electronics &amp; Communication Engineering (First Class)</strong></div>
+            <div class="meta">Government College of Engineering, Tirunelveli — 2012–2016</div>
+          </div>
+
+          <div style="margin-top:14px">
+            <h2 class="section-title">Availability</h2>
+            <div class="badge">Open to remote &amp; hybrid roles</div>
+          </div>
+
+          <p class="footer-note" style="margin-top:14px">
+            Note: Remove profile photo for US/EU job applications to keep ATS compatibility. Use a professional headshot for local / freelancing submissions.
+          </p>
+
+        </section>
+      </aside>
     </div>
-  </section>
+  </div>
 
-  <!-- Education -->
-  <section class="max-w-3xl mx-auto mt-8 bg-white rounded-xl shadow p-6">
-    <h2 class="text-xl font-bold text-blue-700 mb-2">Education</h2>
-    <p>B.E. Electronics & Communication Engineering (First Class, 2016) - Anna University</p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center py-8 text-gray-600">
-    &copy; 2025 Vellieswaran R. | Powered by Tailwind CSS
-  </footer>
+  <!-- Optional: small script to remove empty image if not provided -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const img = document.querySelector('.photo img');
+      if (!img || img.style.display === 'none') {
+        document.querySelector('.photo').style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
